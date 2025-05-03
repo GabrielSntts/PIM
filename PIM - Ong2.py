@@ -1,4 +1,4 @@
-import json # Importei uma Biblioteca para ser compatível trabalhar com arquivos .JSON
+import json # Importei uma Biblioteca para ser compatível trabalhar com arquivos .JSON 
 import os # Importei uma biblioteca onde ele interage com diversos Sistemas Operacionais (Linux, MacIos, Windows, etc.)
 
 ARQUIVO_USUARIOS = "usuarios.json"
