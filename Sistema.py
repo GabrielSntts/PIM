@@ -3,7 +3,6 @@ import os # Importei uma biblioteca onde ele interage com diversos Sistemas Oper
 
 ARQUIVO_USUARIOS = "usuarios.json"
 
-# Cursos que estão disponíveis na plataforma
 cursos_disponiveis = [
     {"id": 1, "nome": "Introdução à Programação com Python"}, # Para todos os Cursos, segue o ID (para a seleção) e o nome
     {"id": 2, "nome": "Lógica de Programação"},
@@ -11,14 +10,13 @@ cursos_disponiveis = [
 ]
 
 # Onde vai salvar e carregar os diferentes usuários do arquivo .JSON
-def carregar_usuarios(): # Defini uma função responsável por carregar os usuários
+def carregar_usuarios():
     if os.path.exists(ARQUIVO_USUARIOS):
         with open(ARQUIVO_USUARIOS, "r", encoding="utf-8") as f:
             return json.load(f)
     else:
         return []
 
-# Aqui ele vai salvar os usuários em um arquivo .JSON
 def salvar_usuarios(usuarios):
     with open(ARQUIVO_USUARIOS, "w", encoding="utf-8") as f:
         json.dump(usuarios, f, indent=4, ensure_ascii=False)
@@ -41,17 +39,17 @@ def cadastrar_usuario(): # Contendo todas as diferentes etapas para cadastrar um
     senha = entrada_segura("Crie uma senha de acesso: ") # Pede que o usuário crie uma senha para as demais situações
 
     regioes_validas = ["Iguatemi", "Engenheiro Marsilac", "Municípios da região Itapetininga"] # Adicionei 3 regiões para cadastrar o usuário (3 regiões com o menor acesso a internet do estado de SP)
-    print("Regiões disponíveis:") # Mostra as regiões disponíveis para o cadastro do usuário
-    for i, reg in enumerate(regioes_validas, 1): # Uma função para numerar as regiões com IDs para a identificação delas
+    print("Regiões disponíveis:") 
+    for i, reg in enumerate(regioes_validas, 1):
         print(f"{i}. {reg}")
 
     while True:
         escolha = entrada_segura("Escolha a região (1-3): ")
         if escolha in ["1", "2", "3"]:
-            regiao = regioes_validas[int(escolha)-1] # Transforma o número da escolha em um índice de lista
-            break # Encerra o loop quando a escolha da região for válida
+            regiao = regioes_validas[int(escolha)-1] 
+            break
         else:
-            print("Opção inválida. Tente novamente.") # Essa menságem será exibida somente se a pessoa tentar cadastrar o usuário em uma região que não existe
+            print("Opção inválida. Tente novamente.") 
 
     usuario = { # Estrutura que os dados vão ficar no arquivo .JSON
         "nome": nome,
@@ -71,17 +69,16 @@ def cadastrar_usuario(): # Contendo todas as diferentes etapas para cadastrar um
 # Nesta etapa, o programa vai listar os usuários novos e os que ja foram cadastrados anteriormente
 def listar_usuarios():
     print("\n--- Lista de Usuários ---")
-    usuarios = carregar_usuarios() # Uma função simples que com base nos valores booleanos irá fornecer os usuários
+    usuarios = carregar_usuarios() 
     if not usuarios:
-        print("Nenhum usuário cadastrado.") # Se não houver nenhum usuário cadastrado, ele retornará uma mensagem dizendo que nenhum usuário foi cadastrado
+        print("Nenhum usuário cadastrado.") 
     else:
-        for i, usuario in enumerate(usuarios, 1): # Ele Fornecerá essas informações quando solicitado os usuários
+        for i, usuario in enumerate(usuarios, 1): 
             print(f"{i}. Nome: {usuario['nome']}, Idade: {usuario['idade']}, Email: {usuario['email']}, Cursos inscritos: {len(usuario['cursos'])}")
 
-# Parte responsável por listar os diferentes cursos disponíveis
 def listar_cursos():
     print("\n--- Cursos Disponíveis ---")
-    for curso in cursos_disponiveis: # Função de repetição onde ele irá listar os cursos com seus IDs até não ter mais nenhum curso (apenas 3 no momento)
+    for curso in cursos_disponiveis: 
         print(f"{curso['id']} - {curso['nome']}")
 
 # Inscreve o usuário em um curso escolhido
@@ -144,21 +141,21 @@ def gerar_estatisticas():
         print("Nenhum curso escolhido ainda.")
 
     # Parte responsável por mostrar a região que mais foi escolhida
-    contador_regioes = {} # Conta quantos usuários são por região
-    regioes_idades = {} # Conta a idade dos usuários por região
+    contador_regioes = {} 
+    regioes_idades = {} 
 
     # Intera para todos os usuários cadastrados no programa
     for u in usuarios:
         regiao = u.get("regiao") # obtem a região do usuário usando .get (evita erros)
         if regiao:
-            contador_regioes[regiao] = contador_regioes.get(regiao, 0) + 1 # Adiciona um contador para os usuários de cada região
-            regioes_idades.setdefault(regiao, []).append(u["idade"]) # Adiciona a idade do usuário para a região 
+            contador_regioes[regiao] = contador_regioes.get(regiao, 0) + 1 
+            regioes_idades.setdefault(regiao, []).append(u["idade"]) 
 
     if contador_regioes:
         regiao_mais_comum = max(contador_regioes, key=contador_regioes.get) # Mostra qual a região que mais tem usuários cadastrados
         media_regiao = sum(regioes_idades[regiao_mais_comum]) / len(regioes_idades[regiao_mais_comum]) # Faz a média das idades
-        print(f"Região mais escolhida: {regiao_mais_comum} ({contador_regioes[regiao_mais_comum]} usuários)") # Exibe a região mais escolhida e com o núimero de usuários que foram contabilizados nela
-        print(f"Média de idade dos usuários dessa região: {media_regiao:.2f} anos") # Mostra a média das idades de cada região
+        print(f"Região mais escolhida: {regiao_mais_comum} ({contador_regioes[regiao_mais_comum]} usuários)") 
+        print(f"Média de idade dos usuários dessa região: {media_regiao:.2f} anos") 
     else:
         print("Nenhuma região cadastrada ainda.")
 
@@ -196,7 +193,7 @@ def menu():
 
 def verificar_login():  # Adicionei uma função onde somente exibirá as demais opções se colocado o login e senha corretos
     print("=== Login de Administrador ===")
-    login = entrada_segura("Login: ") # O python irá mostrar o campo assim para o login e senha
+    login = entrada_segura("Login: ") 
     senha = entrada_segura("Senha: ")
 
     if login != "Admin" or senha != "123321": # Defini o login e senha para a entrada do sistema
@@ -204,5 +201,5 @@ def verificar_login():  # Adicionei uma função onde somente exibirá as demais
         exit()  # Caso o Login e senha estiver errado, exibirá esse erro e com isso, encerra o programa
 
 if __name__ == "__main__":
-    verificar_login()  # Encerra o programa
+    verificar_login()  
     menu()
