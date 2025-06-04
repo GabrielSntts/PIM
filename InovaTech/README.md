@@ -11,7 +11,7 @@ Empresa de tecnologia, com o objeivo de criar sistemas práticos e auxiliares. T
 </p>
 
 <p align="center">
-  <img alt="Gerador funcionando" src=".github/capa.png" width="100%">
+  <img alt="InovaTech Visual" src=".github/capa.png" width="100%">
 </p>
 
 <br>
