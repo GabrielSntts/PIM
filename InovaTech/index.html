@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InovaTech</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">InovaTech</div>
+          <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+          </nav>
+          <a href="#contato" class="contact-button">Entre em Contato</a>
+          <div class="mobile-menu-toggle" onclick="toggleMenu()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </div>
+        </div>
+        <div id="mobileMenu" class="mobile-menu">
+          <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li>
+              <a
+                href="#contato"
+                class="contact-button"
+                style="display: block; text-align: center"
+                >Entre em Contato</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Soluções Tecnológicas para o seu negócio inovar e crescer.</h1>
+            <p>
+              Oferecemos desenvolvimento de software personalizado usando
+              diversas tecnologias e linguagens de programação, com o objetivo
+              de aumentar a produtividade e levar o ensino sobre tecnologia para
+              o mundo todo.
+            </p>
+            <div class="hero-buttons">
+              <a href="#servicos" class="btn-primary"
+                >Conheça Nossos Serviços</a
+              >
+              <a href="#contato" class="btn-secondary">Fale Conosco!</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img
+              src="./img/tecnologiatablet.webp"
+              alt="InovaTech - Soluções Tecnológicas"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>Sobre a InovaTech</h2>
+          <p>
+            Somos uma empresa de tecnologia comprometida em tornar o
+            conhecimento e os recursos tecnológicos acessíveis para pessoas com
+            pouco ou nenhum acesso.
+          </p>
+        </div>
+        <div class="about-content">
+          <div class="about-text">
+            <h3>Quem Somos?</h3>
+            <p>
+              A InovaTech nasceu com o objetivo de levar tecnologia de ponta às
+              empresas de todos os portes e a todo o público que deseja aprender
+              e se desenvolver no mundo virtual. Com um time multidisciplinar e
+              especializado, criamos projetos e soluções para fazermos a
+              diferença no Brasil e no Mundo.
+            </p>
+            <p>
+              Atendemos desde startups até grandes corporações, nosso único
+              objetivo é ajudar todos que estejam conosco. Buscamos sempre
+              evoluir nossos sistemas e nossas áreas de atuação.
+            </p>
+            <ul>
+              <li>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                Desenvolvimento personalizado
+              </li>
+              <li>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                Cursos tecnológicos completos
+              </li>
+              <li>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                Prestamos todo tipo de suporte
+              </li>
+            </ul>
+          </div>
+          <div class="about-image">
+            <img src="./img/tecnologiaempresa.webp" alt="Time da InovaTech" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos" class="services bg-gray-50">
+      <div class="container">
+        <div class="section-title">
+          <h2>Nossos Serviços</h2>
+          <p>
+            Oferecemos um conjunto de serviços para melhorar nossas relações com
+            empresas e clientes!
+          </p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                ></path>
+              </svg>
+            </div>
+            <div class="service-title">Desenvolvimento de sistemas</div>
+            <div class="service-description">
+              Criamos sistemas para auxiliar nossos clientes e parceiros na
+              realização de tarefas.
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+                ></path>
+              </svg>
+            </div>
+            <div class="service-title">Responsividade</div>
+            <div class="service-description">
+              Temos como foco sistemas funcionais em computadores e aplicativos
+              mobile.
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                ></path>
+              </svg>
+            </div>
+            <div class="service-title">Consultoria Técnica</div>
+            <div class="service-description">
+              Estamos continuamente aprimorando nossos sistemas, contando com
+              uma equipe responsável pela consultoria técnica.
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                ></path>
+              </svg>
+            </div>
+            <div class="service-title">Automação Empresarial</div>
+            <div class="service-description">
+              Nossos sistemas além de ajudar pessoas, também automatizamos
+              processos para aumentar a produtividade e manuseio.
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
+                ></path>
+              </svg>
+            </div>
+            <div class="service-title">Beckup em Nuvem</div>
+            <div class="service-description">
+              Oferecemos um sistema de Beckup em Nuvem, muito seguro e prático.
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                ></path>
+              </svg>
+            </div>
+            <div class="service-title">Cybersegurança</div>
+            <div class="service-description">
+              Nós utilizamos métodos de segurança completos e constantemente
+              monitorados e testados, assim mantemos a integridade e segurança
+              de nossos clientes.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos" class="projects">
+      <div class="container">
+        <div class="section-title">
+          <h2>Nossos Projetos</h2>
+          <p>
+            Confira alguns dos projetos que realizamos para fins educacionais e
+            auxiliares.
+          </p>
+        </div>
+        <div class="project-grid">
+          <div class="project-card">
+            <img src="./img/embreve.webp" alt="Plataforma E-commerce" />
+            <div class="project-info">
+              <div class="project-title">Em breve ...</div>
+              <div class="project-client">Breve.</div>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="./img/pythonsistema.webp" alt="App de Saúde" />
+            <div class="project-info">
+              <div class="project-title">Sistema de cadastro e aprendizado</div>
+              <div class="project-client">SafeLearn</div>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="./img/embreve.webp" alt="Dashboard Analytics" />
+            <div class="project-info">
+              <div class="project-title">Em breve ...</div>
+              <div class="project-client">Breve.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="contact bg-gray-50">
+      <div class="container">
+        <div class="section-title">
+          <h2>Entre em Contato</h2>
+          <p>
+            Tem alguma dúvida ou deseja falar conosco? Preencha o formulário e
+            envie sua mensagem abaixo!
+          </p>
+        </div>
+        <div class="contact-form">
+          <form>
+            <div class="form-group">
+              <div>
+                <label for="name">Nome</label>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Digite seu nome completo"
+                />
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Coloque seu email. Ex.: seu@email.com"
+                />
+              </div>
+            </div>
+            <div>
+              <label for="message">Mensagem</label>
+              <textarea
+                id="message"
+                rows="5"
+                placeholder="Escreva sua mensagem..."
+              ></textarea>
+            </div>
+            <div>
+              <button type="submit" class="submit-btn">Enviar Mensagem</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h3>InovaTech</h3>
+            <p>Transformando o mundo ensinando tecnologia.</p>
+          </div>
+          <div class="footer-column">
+            <h3>Links Rápidos</h3>
+            <ul>
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#servicos">Serviços</a></li>
+              <li><a href="#projetos">Projetos</a></li>
+              <li><a href="#contato">Contato</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Contato</h3>
+            <ul>
+              <li>Email: suporte.inovatechbr@gmail.com</li>
+              <li>Telefone: +55 (11) 99999-9999</li>
+              <li>Região: São Paulo, SP - Brasil</li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Redes Sociais</h3>
+            <div class="social-icons">
+              <a
+                href="https://github.com/GabrielSntts/PIMfaculdade"
+                target="_blank"
+                ><svg fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                  /></svg
+              ></a>
+              <a
+                href="https://www.instagram.com/inovatechoficial?igsh=YTdiMGxpaTBlZng5"
+                target="_blank"
+                ><svg fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                  d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228
+                  1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956
+                  1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062
+                  3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635
+                  2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743
+                  2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056
+                  1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814
+                  1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72
+                  2.1228-1.3881.665-.6682 1.0745-1.3378
+                  1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982
+                  1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197
+                  16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076
+                  8.31.0215 7.0301.0839m.1402
+                  21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814
+                  1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06
+                  1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608
+                  1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754
+                  1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617
+                  1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058
+                  3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408
+                  2.2294-.216.5604-.4763.96-.8954
+                  1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953
+                  5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437
+                  1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493
+                  3.4026-.0065 6.157-2.7701
+                  6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156
+                  2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996
+                  3.9996 0 0 1 8 12.0077 />
+                </svg></a
+              >
+              <a href="#"
+                ><svg fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                  /></svg
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          &copy; 2025 InovaTech. Todos os direitos reservados.
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
